@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Anam Holding | پورتفوی پروژه‌ها</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap RTL -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-CfCrinSRH2IR6a4e6fy2q6ioOX7O6Mtm1L9vRvFZ1trBncWmMePhzvafv7oIcWiW"
+        crossorigin="anonymous">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- استایل کلی سایت -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- استایل اختصاصی این صفحه -->
+    <link rel="stylesheet" href="portfolio-list.css">
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR (همون هدر اصلی سایتت رو اینجا کپی کن) ===== -->
+    <!--
+    <header>
+        ... نوبار اصلیت ...
+    </header>
+    -->
+
+    <main>
+        <!-- HERO / HEADER -->
+        <section class="portfolio-archive-hero position-relative">
+            <div class="portfolio-hero-glow"></div>
+
+            <div class="container py-5 position-relative z-1">
+
+                <!-- نوار بالای هدر: برگشت + breadcrumb -->
+                <div class="archive-topbar d-flex justify-content-between align-items-center mb-4">
+                    <!-- لینک برگشت به صفحه اصلی -->
+                    <a href="../index.html" class="archive-back-link">
+                        <i class="bi bi-arrow-right-short"></i>
+                        بازگشت به صفحه اصلی
+                    </a>
+
+                    <!-- breadcrumb -->
+                    <nav class="archive-breadcrumb d-none d-sm-flex" aria-label="breadcrumb">
+                        <ol>
+                            <li>
+                                <a href="../index.html">صفحه اصلی</a>
+                            </li>
+                            <li class="separator">/</li>
+                            <li class="current">پورتفوی پروژه‌ها</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="row align-items-center gy-4 mt-3">
+                    <div class="col-lg-7" data-aos="fade-up">
+                        <span class="archive-badge">
+                            <i class="bi bi-briefcase ms-1"></i>
+                            پورتفوی سرمایه‌گذاری آنام
+                        </span>
+                        <h1 class="archive-title mt-3 mb-3">
+                            تمام پروژه‌ها و استارتاپ‌های
+                            <span class="text-gradient-gold">زیر چتر آنام</span>
+                        </h1>
+                        <p class="archive-subtitle mb-0">
+                            نگاهی یکپارچه به کسب‌وکارهایی که آنام در طراحی مسیر رشد، ساختاردهی و سرمایه‌گذاری آن‌ها
+                            نقش فعال دارد.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-5" data-aos="fade-left" data-aos-delay="80">
+                        <div class="archive-meta-panel">
+                            <div class="archive-meta-row">
+                                <div>
+                                    <span class="meta-label">پروژه‌های فعال</span>
+                                    <div class="meta-value">۱۲</div>
+                                </div>
+                                <div>
+                                    <span class="meta-label">حوزه‌های اصلی</span>
+                                    <div class="meta-value">فین‌تک، سلامت، لجستیک، تجارت</div>
+                                </div>
+                            </div>
+                            <div class="archive-meta-foot">
+                                <i class="bi bi-info-circle ms-1"></i>
+                                این صفحه در حال توسعه است و به‌مرور با پروژه‌های جدید به‌روزرسانی می‌شود.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- خط طلایی زیر هدر -->
+            <div class="archive-divider-line"></div>
+        </section>
+
+        <!-- FILTERS + GRID -->
+        <section class="portfolio-archive-section position-relative">
+            <div class="portfolio-archive-bg-orbit"></div>
+
+            <div class="container py-5 position-relative z-1">
+
+                <!-- FILTER BAR -->
+                <div class="row align-items-center mb-4 g-3">
+                    <div class="col-lg-6" data-aos="fade-up">
+                        <div class="filter-label">
+                            <span class="dot dot-gold"></span>
+                            مشاهده پروژه‌ها بر اساس حوزه
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="60">
+                        <div class="portfolio-filter-bar justify-content-lg-end">
+                            <button class="filter-chip active" data-filter="all">
+                                همه پروژه‌ها
+                            </button>
+                            <button class="filter-chip" data-filter="fintech">
+                                فین‌تک
+                            </button>
+                            <button class="filter-chip" data-filter="health">
+                                سلامت هوشمند
+                            </button>
+                            <button class="filter-chip" data-filter="logistics">
+                                لجستیک
+                            </button>
+                            <button class="filter-chip" data-filter="commerce">
+                                تجارت و مارکت‌پلیس
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GRID -->
+                <div class="row g-4" id="portfolioGrid">
+
+                    <!-- ITEM 1 -->
+                    <div class="col-md-6 col-xl-4 portfolio-item" data-category="fintech"
+                        data-aos="fade-up" data-aos-delay="40">
+                        <article class="project-card">
+                            <div class="project-media">
+                                <img src="../assest/image/portfolio/1.png" alt="NovaPay" class="project-img">
+                                <span class="project-tag">
+                                    <i class="bi bi-credit-card ms-1"></i>
+                                    فین‌تک
+                                </span>
+                            </div>
+                            <div class="project-body">
+                                <div class="project-header">
+                                    <h3 class="project-title">نوا پی (NovaPay)</h3>
+                                    <span class="stage-chip">Series A</span>
+                                </div>
+                                <p class="project-text">
+                                    زیرساخت پرداخت هوشمند برای کسب‌وکارهایی که می‌خواهند هر تراکنش را به داده‌ی قابل تصمیم تبدیل کنند.
+                                </p>
+                                <div class="project-footer">
+                                    <span class="project-meta">
+                                        <i class="bi bi-graph-up-arrow ms-1"></i>
+                                        رشد پایدار کاربران
+                                    </span>
+                                    <a href="/portfolio-details/portfolio-detail.html" class="project-link">
+                                        مشاهده جزئیات
+                                        <i class="bi bi-arrow-left-short"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- ITEM 2 -->
+                    <div class="col-md-6 col-xl-4 portfolio-item" data-category="health"
+                        data-aos="fade-up" data-aos-delay="80">
+                        <article class="project-card">
+                            <div class="project-media">
+                                <img src="../assest/image/portfolio/2.png" alt="Medical Plus" class="project-img">
+                                <span class="project-tag">
+                                    <i class="bi bi-heart-pulse ms-1"></i>
+                                    سلامت هوشمند
+                                </span>
+                            </div>
+                            <div class="project-body">
+                                <div class="project-header">
+                                    <h3 class="project-title">مدیکال پلاس</h3>
+                                    <span class="stage-chip">Seed Round</span>
+                                </div>
+                                <p class="project-text">
+                                    تشخیص هوشمند بیماری‌های پوستی که از یک عکس ساده، مسیر درمان را برای پزشک و بیمار سریع‌تر و مطمئن‌تر می‌کند.
+                                </p>
+                                <div class="project-footer">
+                                    <span class="project-meta">
+                                        <i class="bi bi-shield-check ms-1"></i>
+                                        مبتنی بر هوش مصنوعی
+                                    </span>
+                                    <a href="#" class="project-link">
+                                        مشاهده جزئیات
+                                        <i class="bi bi-arrow-left-short"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- ITEM 3 -->
+                    <div class="col-md-6 col-xl-4 portfolio-item" data-category="logistics"
+                        data-aos="fade-up" data-aos-delay="120">
+                        <article class="project-card">
+                            <div class="project-media">
+                                <img src="../assest/image/portfolio/3.png" alt="SariBar" class="project-img">
+                                <span class="project-tag">
+                                    <i class="bi bi-truck ms-1"></i>
+                                    لجستیک
+                                </span>
+                            </div>
+                            <div class="project-body">
+                                <div class="project-header">
+                                    <h3 class="project-title">سریع‌بار</h3>
+                                    <span class="stage-chip">Growth</span>
+                                </div>
+                                <p class="project-text">
+                                    شبکه هوشمند حمل‌ونقل بین‌شهری برای کسب‌وکارهایی که به شفافیت، سرعت و ردیابی دقیق بار نیاز دارند.
+                                </p>
+                                <div class="project-footer">
+                                    <span class="project-meta">
+                                        <i class="bi bi-geo-alt ms-1"></i>
+                                        ردیابی لحظه‌ای
+                                    </span>
+                                    <a href="#" class="project-link">
+                                        مشاهده جزئیات
+                                        <i class="bi bi-arrow-left-short"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- ITEM 4 -->
+                    <div class="col-md-6 col-xl-4 portfolio-item" data-category="commerce"
+                        data-aos="fade-up" data-aos-delay="60">
+                        <article class="project-card">
+                            <div class="project-media">
+                                <img src="../assest/image/portfolio/4.png" alt="BazaarLink" class="project-img">
+                                <span class="project-tag">
+                                    <i class="bi bi-shop-window ms-1"></i>
+                                    تجارت و مارکت‌پلیس
+                                </span>
+                            </div>
+                            <div class="project-body">
+                                <div class="project-header">
+                                    <h3 class="project-title">بازار لینک (BazaarLink)</h3>
+                                    <span class="stage-chip">Pre-Series A</span>
+                                </div>
+                                <p class="project-text">
+                                    مارکت‌پلیس B2B برای اتصال تامین‌کنندگان و فروشگاه‌ها؛ با تمرکز بر سفارش‌گذاری ساده و قیمت‌گذاری پویا.
+                                </p>
+                                <div class="project-footer">
+                                    <span class="project-meta">
+                                        <i class="bi bi-people ms-1"></i>
+                                        شبکه تأمین گسترده
+                                    </span>
+                                    <a href="#" class="project-link">
+                                        مشاهده جزئیات
+                                        <i class="bi bi-arrow-left-short"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- ITEM 5 -->
+                    <div class="col-md-6 col-xl-4 portfolio-item" data-category="fintech"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <article class="project-card">
+                            <div class="project-media">
+                                <img src="../assest/image/portfolio/5.png" alt="CrediLine" class="project-img">
+                                <span class="project-tag">
+                                    <i class="bi bi-cash-coin ms-1"></i>
+                                    فین‌تک
+                                </span>
+                            </div>
+                            <div class="project-body">
+                                <div class="project-header">
+                                    <h3 class="project-title">کردی‌لاین (CrediLine)</h3>
+                                    <span class="stage-chip">Early Stage</span>
+                                </div>
+                                <p class="project-text">
+                                    پلتفرم اعتبارسنجی و ارائه‌ی لاین اعتباری به مشتریان، بر اساس رفتار خرید و الگوی بازپرداخت.
+                                </p>
+                                <div class="project-footer">
+                                    <span class="project-meta">
+                                        <i class="bi bi-stars ms-1"></i>
+                                        تمرکز بر مصرف‌کننده
+                                    </span>
+                                    <a href="#" class="project-link">
+                                        مشاهده جزئیات
+                                        <i class="bi bi-arrow-left-short"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- ITEM 6 -->
+                    <div class="col-md-6 col-xl-4 portfolio-item" data-category="health"
+                        data-aos="fade-up" data-aos-delay="140">
+                        <article class="project-card">
+                            <div class="project-media">
+                                <img src="../assest/image/portfolio/6.png" alt="CareFlow" class="project-img">
+                                <span class="project-tag">
+                                    <i class="bi bi-hospital ms-1"></i>
+                                    سلامت هوشمند
+                                </span>
+                            </div>
+                            <div class="project-body">
+                                <div class="project-header">
+                                    <h3 class="project-title">کر فلو (CareFlow)</h3>
+                                    <span class="stage-chip">Pilot</span>
+                                </div>
+                                <p class="project-text">
+                                    مدیریت مسیر بیمار در کلینیک‌ها؛ از پذیرش تا فالوآپ، برای کاهش اتلاف زمان و افزایش رضایت.
+                                </p>
+                                <div class="project-footer">
+                                    <span class="project-meta">
+                                        <i class="bi bi-clock-history ms-1"></i>
+                                        کاهش زمان انتظار
+                                    </span>
+                                    <a href="#" class="project-link">
+                                        مشاهده جزئیات
+                                        <i class="bi bi-arrow-left-short"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER (فوتر اصلی سایتت رو اینجا کپی کن) ===== -->
+    <!--
+    <footer>
+        ...
+    </footer>
+    -->
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script src="../assest/js/main.js"></script>
+    <script src="portfolio-list.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 700,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 100,
+            disable: 'mobile'
+        });
+    </script>
+</body>
+
+</html>

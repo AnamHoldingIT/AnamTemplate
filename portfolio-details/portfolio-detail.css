@@ -371,35 +371,47 @@
 
 /* کارت دستگاه – انیمیشن ورود + فلوت ملایم */
 
-.pf-device-card {
-    position: relative;
-    width: 100%;
-    max-width: 360px;
-    border-radius: 24px;
-    padding: 0.6rem 0.6rem 0.9rem;
-    background: radial-gradient(circle at 0 0, rgba(255, 255, 255, 0.06), transparent 60%),
-        linear-gradient(145deg, #020c0c, #031b19);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    box-shadow:
-        0 18px 50px rgba(0, 0, 0, 0.95),
-        0 0 50px rgba(4, 120, 100, 0.5);
-    transform-origin: center;
+/* نور روی صفحه – شاین اسلایدی شیک */
+.pf-device-screen::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        120deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.32) 45%,
+        rgba(255, 255, 255, 0.05) 60%,
+        transparent 100%
+    );
+    mix-blend-mode: screen;
+    transform: translateX(-120%);
     opacity: 0;
-    transform: translateY(20px) scale(0.97);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    pointer-events: none;
+    animation: pfScreenShine 11s linear infinite;
 }
 
-.pf-device-card--in {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    animation: pfDeviceFloat 9s ease-in-out infinite;
+/* انیمیشن شاین – هر چند ثانیه یک بار، آروم رد میشه */
+@keyframes pfScreenShine {
+    0% {
+        transform: translateX(-120%);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.45;
+    }
+    50% {
+        transform: translateX(120%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(120%);
+        opacity: 0;
+    }
 }
 
-@keyframes pfDeviceFloat {
-    0%   { transform: translateY(0) scale(1); }
-    50%  { transform: translateY(-8px) scale(1.01); }
-    100% { transform: translateY(0) scale(1); }
-}
 
 /* Glow چرخان (نسبتاً سبک) */
 
